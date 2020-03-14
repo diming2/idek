@@ -1,0 +1,142 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 14/03/20 2:21 PM
+Description: Rendering overlay
+
+com.electronwill.nightconfig.core.io.ParsingException: Invalid value: minecraft:blaze
+	at com.electronwill.nightconfig.toml.ValueParser.parseNumber(ValueParser.java:101) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.toml.ValueParser.parse(ValueParser.java:63) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.toml.ArrayParser.parse(ArrayParser.java:31) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.toml.ValueParser.parse(ValueParser.java:32) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.toml.ValueParser.parse(ValueParser.java:68) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.toml.TableParser.parseNormal(TableParser.java:57) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.toml.TableParser.parseNormal(TableParser.java:101) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.toml.TomlParser.parse(TomlParser.java:88) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.toml.TomlParser.parse(TomlParser.java:37) ~[toml-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:113) ~[core-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:219) ~[core-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:202) ~[core-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.core.file.WriteSyncFileConfig.load(WriteSyncFileConfig.java:73) ~[core-3.6.0.jar:?] {}
+	at com.electronwill.nightconfig.core.file.AutosaveCommentedFileConfig.load(AutosaveCommentedFileConfig.java:85) ~[core-3.6.0.jar:?] {}
+	at net.minecraftforge.fml.config.ConfigFileTypeHandler.lambda$reader$1(ConfigFileTypeHandler.java:53) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigFileTypeHandler$$Lambda$2407/641773597.apply(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.fml.config.ConfigTracker.openConfig(ConfigTracker.java:99) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker.lambda$loadConfigs$1(ConfigTracker.java:83) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.config.ConfigTracker$$Lambda$2406/1540261350.accept(Unknown Source) ~[?:?] {}
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:1.8.0_51] {}
+	at java.util.Collections$SynchronizedCollection.forEach(Collections.java:2062) ~[?:1.8.0_51] {}
+	at net.minecraftforge.fml.config.ConfigTracker.loadConfigs(ConfigTracker.java:83) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.ModLoader.loadMods(ModLoader.java:152) ~[?:?] {re:classloading}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$startModLoading$6(ClientModLoader.java:123) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader$$Lambda$2397/263835235.run(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader$$Lambda$1991/199895099.run(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.fml.client.ClientModLoader.startModLoading(ClientModLoader.java:123) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$onreload$3(ClientModLoader.java:105) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader$$Lambda$2395/1195378184.run(Unknown Source) ~[?:?] {}
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraftforge.fml.client.ClientModLoader$$Lambda$1991/199895099.run(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1618) ~[?:1.8.0_51] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1610) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1689) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) ~[?:1.8.0_51] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at com.electronwill.nightconfig.toml.ValueParser.parseNumber(ValueParser.java:101)
+	at com.electronwill.nightconfig.toml.ValueParser.parse(ValueParser.java:63)
+	at com.electronwill.nightconfig.toml.ArrayParser.parse(ArrayParser.java:31)
+	at com.electronwill.nightconfig.toml.ValueParser.parse(ValueParser.java:32)
+	at com.electronwill.nightconfig.toml.ValueParser.parse(ValueParser.java:68)
+	at com.electronwill.nightconfig.toml.TableParser.parseNormal(TableParser.java:57)
+	at com.electronwill.nightconfig.toml.TableParser.parseNormal(TableParser.java:101)
+	at com.electronwill.nightconfig.toml.TomlParser.parse(TomlParser.java:88)
+	at com.electronwill.nightconfig.toml.TomlParser.parse(TomlParser.java:37)
+	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:113)
+	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:219)
+	at com.electronwill.nightconfig.core.io.ConfigParser.parse(ConfigParser.java:202)
+	at com.electronwill.nightconfig.core.file.WriteSyncFileConfig.load(WriteSyncFileConfig.java:73)
+	at com.electronwill.nightconfig.core.file.AutosaveCommentedFileConfig.load(AutosaveCommentedFileConfig.java:85)
+	at net.minecraftforge.fml.config.ConfigFileTypeHandler.lambda$reader$1(ConfigFileTypeHandler.java:53)
+	at net.minecraftforge.fml.config.ConfigFileTypeHandler$$Lambda$2407/641773597.apply(Unknown Source)
+	at net.minecraftforge.fml.config.ConfigTracker.openConfig(ConfigTracker.java:99)
+	at net.minecraftforge.fml.config.ConfigTracker.lambda$loadConfigs$1(ConfigTracker.java:83)
+	at net.minecraftforge.fml.config.ConfigTracker$$Lambda$2406/1540261350.accept(Unknown Source)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at java.util.Collections$SynchronizedCollection.forEach(Collections.java:2062)
+	at net.minecraftforge.fml.config.ConfigTracker.loadConfigs(ConfigTracker.java:83)
+	at net.minecraftforge.fml.ModLoader.loadMods(ModLoader.java:152)
+
+-- Overlay render details --
+Details:
+	Overlay name: net.minecraft.client.gui.ResourceLoadProgressGui
+Stacktrace:
+	at net.minecraft.client.renderer.GameRenderer.func_195458_a(GameRenderer.java:544)
+	at net.minecraft.client.Minecraft.func_195542_b(Minecraft.java:890)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:384)
+	at net.minecraft.client.main.Main.main(SourceFile:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider.lambda$launchService$0(FMLClientLaunchProvider.java:56)
+	at net.minecraftforge.fml.loading.FMLClientLaunchProvider$$Lambda$390/1840670774.call(Unknown Source)
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54)
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72)
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81)
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.14.4
+	Minecraft Version ID: 1.14.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1082491736 bytes (1032 MB) / 2147483648 bytes (2048 MB) up to 2147483648 bytes (2048 MB)
+	CPUs: 6
+	JVM Flags: 9 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	ModLauncher: 4.1.0+62+5bfa59b
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/eventbus-1.0.0-service.jar eventbus PLUGINSERVICE 
+		/forge-1.14.4-28.2.0.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.2.0.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-1.0.1-milestone.0.1+94458e7-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.14.4-28.2.0.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.2.0.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.14.4-28.2.0.jar fml TRANSFORMATIONSERVICE 
+	FML: 28.2
+	Forge: net.minecraftforge:28.2.0
+	FML Language Providers: 
+		javafml@28.2
+		minecraft@1
+	Mod List: 
+		forge-1.14.4-28.2.0-client.jar Minecraft {minecraft@1.14.4 COMMON_SETUP}
+		BadMobs-1.14.4-3.0.1.jar BadMobs {badmobs@3.0.1 COMMON_SETUP}
+		forge-1.14.4-28.2.0-universal.jar Forge {forge@28.2.0 COMMON_SETUP}
+	Launched Version: 1.14.4-forge-28.2.0
+	LWJGL: 3.2.2 build 10
+	OpenGL: GeForce GTX 1060 6GB/PCIe/SSE2 GL version 4.6.0 NVIDIA 416.16, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'
+	Type: Client (map_client.txt)
+	Resource Packs: vanilla, programer_art
+	Current Language: English (United Kingdom)
+	CPU: 6x Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
